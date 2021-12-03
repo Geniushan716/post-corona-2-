@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('ef19ff43ae6cece9d8b0bdf13af45ea8');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '다시 일상으로 돌아갈 수 있을까',
+        description: '포스트 코로나 시대에 필요한 게 무엇인지 확인해 보세요',
+        imageUrl:
+          'https://assetsnffrgf-a.akamaihd.net/assets/m/501100032/univ/art/501100032_univ_lsr_lg.jpg',
+        link: {
+          mobileWebUrl: 'https://www.jw.org/ko/라이브러리/연재/그-밖의-주제/코로나19-이후-달라진-세상-성경-원칙/',
+          webUrl: 'https://www.jw.org/ko/라이브러리/연재/그-밖의-주제/코로나19-이후-달라진-세상-성경-원칙/',
+        },
+      },
+      buttons: [
+        {
+          title: '여기를 눌러 보세요',
+          link: {
+            mobileWebUrl: 'https://www.jw.org/ko/라이브러리/연재/그-밖의-주제/코로나19-이후-달라진-세상-성경-원칙/',
+            webUrl: 'https://www.jw.org/ko/라이브러리/연재/그-밖의-주제/코로나19-이후-달라진-세상-성경-원칙/',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+
+
+</html>
